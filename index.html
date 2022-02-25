@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Animal Adopt</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Colo Shop Template">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<div class="modal" id="newentrybtn">
+	<div class="modal-main">
+		<span class="close">&times;
+		</span>
+		<img src="./aset/slider/logo-2.png" width="210px">
+		<h4 id="tulisan">New Listing</h4>
+		<form id="new_entry_form">
+			<label id='newentryuser'>Pet's Name:<br>
+				<input type="text">
+			</label>
+			<label id="newentryname">Former Owner's Name:<br>
+				<input type="text">
+			</label>
+			<label>Type:<br>
+				<input type="radio" name="type"> Cat
+				<input type="radio" name="type"> Dog
+				<input type="radio" name="type"> Rabbit
+			</label>
+			<label>Breed:<br>
+				<input type="text" id="newentrybreed">
+			</label>
+			<label>Current Age:<br>
+				<input type="text" id="newentryage">
+			</label>
+			<label>Gender:<br>
+				<input type="text" id="newentrygender">
+			</label>
+			<label>Adoption Care:<br>
+				<input type="number" id="newentrynumber">
+			</label>
+			<label>Please upload image:<br>
+				<input type="file" name="inp-img" id="inpFile">
+				<div class="image-preview" id="imagePreview">
+					<img src="" alt="Image Preview" class="image-preview__image">
+					<span class="image-preview__default-text">Image Preview</span>
+				</div>
+			</label>
+			<label>By clicking "Submit" you have agree with AnimalAdopt's Term & Condition<br>
+				<input type="submit" value="submit" class="red_button shop_now_button" id="new_entry_submit">
+			</label>
+		</form>
+	</div>
+</div>
+
+<div class="super_container">
+	<header class="header trans_300">
+		<div class="main_nav_container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-right">
+						<div class="logo_container">
+							<a href="#"><img src="./aset/slider/logo-2.png"></a>
+						</div>
+						<nav class="navbar">
+							<ul class="navbar_user">
+								<li class="checkout" >
+									<a>
+										<i class="fa fa-shopping-cart" aria-hidden="true" id="card-icon"></i>
+										<!--card-->
+										<div class="card">
+											<h1 class="card-title">ADOPT</h1>
+											<div class="card-content">
+												<div class="card-box" id="pesanan">
+														<div class="card-product-title" id="namahewan">Your Cart</div>
+														
+													<!--Remove pesanan-->
+													<i class="bx bxs-trash-alt card-remove"></i>
+												</div>
+											</div>
+											<!--total-->
+											<div class="total">
+												<div class="total-title">Total</div>
+												<div class="total-price" id="currency">0</div>
+											</div>
+											<!--buy-->
+											<button type="button" class="btn-buy" id="btnbuy">ADOPT NOW</button>
+											<!--CART CLOSE-->
+											<i class="bx bx-x" id="close-card"></i>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Slider -->
+	<div class="main_slider" style="background-image:url(./aset/slider/mainmenu-2.jpg)">
+		<div class="container fill_height">
+			<div class="row align-items-center fill_height">
+				<div class="col">
+					<div class="main_slider_content">
+						<h3 style="color: white;">Rescue-Love-Repeat</h3>
+						<h1 style="font-weight: bold;">Save a live,</h1>
+						<h2>Bring home a new friend.</h2>
+						<div class="red_button shop_now_button"><a href="#cats_catalogue">Adopt now</a></div><br>
+						<div class="red_button shop_now_button_2" id="new_entry"><a href="#">Open for Adopt</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- kucing -->
+
+	<div class="new_arrivals" id="cats_catalogue">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title new_arrivals_title">
+						<h2>Cats</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+
+						<!-- Product 1 -->
+
+						<div class="product-item" id="product1">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/cat/anggora.jpg" alt="">
+								</div>
+								<div></div>
+								
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Angel</p>
+										<p>Race   : Anggora</p>
+										<p>age    : 6 month</p>
+										<p>Gender : Female </p>
+									</h6>
+									<div class="product_price">Rp. 1.600.000,-</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#" id="add-cart">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart" value="1600000 Kucing">ADOPT</button>
+						</div>
+
+						<!-- Product 2 -->
+
+						<div class="product-item">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/cat/birman.jpg" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Rico</p>	
+										<p>Race   : Birman</p>
+										<p>age    : 1 month</p>
+										<p>Gender : Male </p>
+									</h6>
+									<div class="product_price">Rp. 700.000,-</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart2" value="700000 Kucing">ADOPT</button>
+						</div>
+
+						<!-- Product 3 -->
+
+						<div class="product-item women">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/cat/Savannah.jpg" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Koro</p>	
+										<p>Race   : Savannah</p>
+										<p>age    : 3 month</p>
+										<p>Gender : Male </p></h6>
+									<div class="product_price">Rp. 100.000.000,-</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart3" value="100000000 Kucing">ADOPT</button>
+						</div>
+
+						<!-- Product 4 -->
+
+						<div class="product-item accessories">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/cat/spinx.png" alt="">
+								</div>
+								<div class="favorite favorite_left"></div>
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Cleo</p>	
+										<p>Race   : sphynx</p>
+										<p>age    : 2 month</p>
+										<p>Gender : Female </p>
+									</h6>
+									<div class="product_price">Rp. 25.000.000,-</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart4" value="25000000 Cats">ADOPT</button>
+						</div>
+
+						<!-- Product 5 -->
+
+						<div class="product-item women men">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/cat/Kucing-Domestik.jpg" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Titi</p>	
+										<p>Race   : Domestik</p>
+										<p>age    : 2 month</p>
+										<p>Gender : Female </p>
+									</h6>
+									<div class="product_price">Rp. 150.000</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart5" value="150000 Cats">ADOPT</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Anjing -->
+	<div class="new_arrivals" id="dogs_catalogue">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title new_arrivals_title">
+						<h2>Dogs</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+
+						<!-- anjing 1 1 -->
+
+						<div class="product-item">
+							<div class="product discount product_filter">
+								<div class="product_image">
+									<img src="./aset/dog/bulldog.jpg" alt="">
+								</div>
+								<div class="favorite favorite_left"></div>
+								
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Chiko</p>	
+										<p>Race   : bulldog</p>
+										<p>age    : 3 month</p>
+										<p>Gender : Male </p>
+									</h6>
+									<div class="product_price">Rp. 6.000.000,-</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart6" value="6000000 Anjing">ADOPT</button>
+						</div>
+
+						<!-- anjing 2-->
+
+						<div class="product-item">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/dog/chihuahua.jpg" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Fanny</p>	
+										<p>Race   : Chihuahua</p>
+										<p>age    : 2 week</p>
+										<p>Gender : Female </p>
+									</h6>
+									<div class="product_price">Rp. 1.500.000,-</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart7" value="1500000 Anjing">ADOPT</button>
+						</div>
+
+						<!-- Product 3 -->
+
+						<div class="product-item">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/dog/golden.jpg" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Goofy</p>	
+										<p>Race   : Golden Retriever</p>
+										<p>age    : 1 month</p>
+										<p>Gender : Male </p>
+									</h6>
+									<div class="product_price">Rp. 14.000.000,-</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart8" value="14000000 Dog">ADOPT</button>
+						</div>
+
+						<!-- Product 4 -->
+
+						<div class="product-item">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/dog/pom.jpg" alt="">
+								</div>
+								<div class="favorite favorite_left"></div>
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Ruby</p>	
+										<p>Race   : Mini Pom</p>
+										<p>age    : 1 month</p>
+										<p>Gender : Female </p>
+									</h6>
+									<div class="product_price">Rp. 1.200.000,-</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart9" value="1200000 Dog">ADOPT</button>
+						</div>
+
+						<!-- Product 5 -->
+
+						<div class="product-item">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/dog/anjingKampung.jpg" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Bibul</p>	
+										<p>Race   : Domestik</p>
+										<p>age    : 2 month</p>
+										<p>Gender : Male </p>
+									</h6>
+									<div class="product_price">Rp. 250.000</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart10" value="250000 Dog">ADOPT</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="new_arrivals" id="rabbits_catalogue">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title new_arrivals_title">
+						<h2>Rabbits</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+
+						<!-- Kelinci 1 -->
+
+						<div class="product-item">
+							<div class="product discount product_filter">
+								<div class="product_image">
+									<img src="./aset/rabbit/europe_rabbit.jpg" alt="">
+								</div>
+								<div class="favorite favorite_left"></div>
+								
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Eja</p>	
+										<p>Race   : europe</p>
+										<p>age    : 12 month</p>
+										<p>Gender : Male </p>
+									</h6>
+									<div class="product_price">Rp. 700.000,-</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart11" value="700000 Kelinci">ADOPT</button>
+						</div>
+
+						<!-- anjing 2-->
+
+						<div class="product-item">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/rabbit/fuzylop_rabbit.jpg" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Anwar</p>	
+										<p>Race   : Fuzyloop</p>
+										<p>age    : 6 Month</p>
+										<p>Gender : Male </p>
+									</h6>
+									<div class="product_price">Rp. 1.200.000,-</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart12" value="1200000 Rabbit">ADOPT</button>
+						</div>
+
+						<!-- Product 3 -->
+
+						<div class="product-item">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/rabbit/minilop_rabbit.jpg" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Ranggo</p>	
+										<p>Race   : Minilop</p>
+										<p>age    : 3 month</p>
+										<p>Gender : Male </p>
+									</h6>
+									<div class="product_price">Rp. 1.500.000,-</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart13" value="1500000 Rabbit Ranggo">ADOPT</button>
+						</div>
+
+						<!-- Product 4 -->
+
+						<div class="product-item">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/rabbit/polandia_rabbit.jpg" alt="">
+								</div>
+								<div class="favorite favorite_left"></div>
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Siti</p>	
+										<p>Race   : Polandia</p>
+										<p>age    : 8 month</p>
+										<p>Gender : Female </p>
+									</h6>
+									<div class="product_price">Rp. 1.150.000,-</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart14" value="1150000 Rabbit">ADOPT</button>
+						</div>
+
+						<!-- Product 5 -->
+
+						<div class="product-item">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="./aset/rabbit/rex_rabbit.jpg" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name">
+										<p>Name   : Dewa</p>	
+										<p>Race   : Rex</p>
+										<p>age    : 10 month</p>
+										<p>Gender : Female </p>
+									</h6>
+									<div class="product_price">Rp. 1.000.000</div>
+								</div>
+							</div>
+							<!-- <div class="red_button add_to_cart_button"><a href="#">ADOPT</a></div> -->
+							<br><center><button type="submit" class="red_button add_to_cart_button" id="add-cart15" value="1000000 Rabbit">ADOPT</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
+						<!-- <ul class="footer_nav">
+							<li><a href="#">Leonard</a></li>
+							<li><a href="#">Radhea</a></li>
+							<li><a href="contact.html">Contact us</a></li>
+						</ul> -->
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
+						<ul>
+							<li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="footer_nav_container">
+						<div class="cr">©2022 All Rights Reserverd. Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">Group 5</a> &amp; distributed by <a href="https://themewagon.com">Hacktive8</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="js/custom.js"></script>
+<script src="./index.js"></script>
+</body>
+
+</html>
